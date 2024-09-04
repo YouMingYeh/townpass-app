@@ -19,6 +19,11 @@ abstract final class TrendingServiceModel {
         title: '施工資訊',
         url: '',
       ),
+      TrendingService(
+        icon: Assets.svg.iconCommunityService.svg(),
+        title: '我的服務',
+        url: 'https://townpass-microservice.vercel.app/',
+      ),
       // 在此列表後加入新熱門按鈕
       // add new trending service button here
     ];

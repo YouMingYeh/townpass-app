@@ -28,7 +28,7 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
-  ;
+  myService;
 }
 
 extension MyServiceIdExt on MyServiceItemId {
@@ -165,7 +165,8 @@ extension MyServiceIdExt on MyServiceItemId {
           description: '提供各區日常服務地圖查找',
           icon: Assets.svg.iconLocationSearch24.svg(),
           category: MyServiceCategory.explore,
-          destinationUrl: 'https://taipei-pass-service.vercel.app/surrounding-service/',
+          destinationUrl:
+              'https://taipei-pass-service.vercel.app/surrounding-service/',
         ),
       MyServiceItemId.zoo => MyServiceItem(
           title: '愛遊動物園',
@@ -173,6 +174,13 @@ extension MyServiceIdExt on MyServiceItemId {
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
           destinationUrl: '',
+        ),
+      MyServiceItemId.myService => MyServiceItem(
+          icon: Assets.svg.iconCommunityService.svg(),
+          title: '我的服務',
+          description: '我的新微服務',
+          destinationUrl: 'https://townpass-microservice.vercel.app/',
+          category: MyServiceCategory.other,
         ),
     };
   }
